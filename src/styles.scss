@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+.ui-datalist-content.ui-widget-content {
+  border: none;
+}
+
+.ui-datalist .ui-datalist-emptymessage {
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 20px;
+}
+
+.ui-fluid .ui-message {
+  margin: 0;
+  margin-top: 8px;
+}

@@ -1,0 +1,24 @@
+<div class="ui-g ui-fluid" style="margin-top: 5%">
+  <form name="form" (ngSubmit)="login()" #f="ngForm" novalidate class="ui-sm-offset-0 ui-sm-12 ui-md-offset-3 ui-md-6 ui-g-offset-3 ui-g-6 ui-xl-offset-3 ui-xl-6">
+    <div>
+      <div class="ui-g">
+        <div class="ui-sm-offset-0 ui-sm-12 ui-g-offset-3 ui-g-6 ui-md-offset-2 ui-md-8 ui-lg-offset-3 ui-lg-6 ui-xl-offset-4 ui-xl-4">
+          <input type="text" pInputText name="username" [formControl]="username" placeholder="Имя пользователя" required/>
+          <p-message severity="error" *ngIf="isSubmitted && username.hasError('required')" text="Требуется ввести имя"></p-message>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-sm-offset-0 ui-sm-12 ui-g-offset-3 ui-g-6 ui-md-offset-2 ui-md-8 ui-lg-offset-3 ui-lg-6 ui-xl-offset-4 ui-xl-4">
+          <input type="password" pInputText name="password" [formControl]="password" placeholder="Пароль" required/>
+          <p-message severity="error" *ngIf="isSubmitted && password.hasError('required')" text="Требуется ввести пароль"></p-message>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-sm-offset-0 ui-sm-12 ui-g-offset-3 ui-g-6 ui-md-offset-2 ui-md-8 ui-lg-offset-3 ui-lg-6 ui-xl-offset-4 ui-xl-4">
+          <button pButton type="submit" class="ui-button-success" label="Вход"></button>
+          <p-message severity="error" *ngIf="isError" text="Неверное имя пользователя или пароль"></p-message>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
